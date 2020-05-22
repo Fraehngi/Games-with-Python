@@ -1,3 +1,4 @@
+import json
 from settings import *
 
 # defined location of player database for later usage
@@ -24,14 +25,20 @@ class Player:
                   f"It's your first time playing with us!")
 
     def check_existing_player(self):
-        with open(names_location, "r") as saved_players:
-            if self.username in saved_players.read():
-                return True
-            return False
+        file = RESOURCES_PATH / "players" / f"{self.username}.json"
+        if file.exists():
+            return True
+        return False
 
     def save_new_player(self):
-        with open(names_location, "a+") as saved_players:
-            saved_players.write(self.username + "\n")
+        gamer_db = {
+            "username": self.username,
+            "played": 1
+        }
+
+        with open(RESOURCES_PATH / "players" / f"{self.username}.json", "w") \
+                as json_file:
+            json.dump(gamer_db, json_file)
 
     def prompt_name(self):
         """
