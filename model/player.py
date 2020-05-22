@@ -1,9 +1,6 @@
 import json
 from settings import *
 
-# defined location of player database for later usage
-names_location = RESOURCES_PATH / "name_db.txt"
-
 
 class Player:
     """This class handles the creation of new players"""
