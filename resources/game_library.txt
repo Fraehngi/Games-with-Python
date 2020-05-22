@@ -1,0 +1,6 @@
+Right now you can choose from two games total.
+
+0) I'm feeling lucky, pick a random game!
+1) Hangman
+2) Rock, Paper, Scissors
+

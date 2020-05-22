@@ -1,0 +1,10 @@
+Car
+Bicycle
+Train
+Airplane
+Scooter
+Racecar
+Cargobike
+Roadbike
+Pedelec
+Motorcycle
